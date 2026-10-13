@@ -74,9 +74,9 @@ EXP_DIR=$G05_OUTPUT_DIR/yam/<exp> bash upload_output.sh
 | `data/stats/yam_stats.json` | `Zenith6666/yam-actioncodec` | `configs/task/yam.yaml` → `datastatics_path` |
 | `data/yam/TASK-YAM-XXXX_lerobot` | `Zenith6666/yam-lerobot` | `configs/data/yam.yaml` → `dataset_dirs` |
 
-## 已知待办（不影响本仓库代码，但影响训练效果）
+## 说明
 
-1. **任务指令文本**：backbone 是 VLA，需要每条 episode 的真实自然语言指令。数据转换时已把
-   占位英文指令写入 parquet `task` 字段；正式训练前需换成真实指令（重转数据或后处理）。
+1. **任务指令文本**：backbone 是 VLA，需要每条 episode 的真实自然语言指令。数据集已按
+   `ActionCodec-finetune-pkg/tools/yam/tasks_yam.json` 的真实英文指令转换，parquet `task` 字段已就绪。
 2. **全参微调**：`configs/task/yam.yaml` 已配 `vla_training_strategy: vla-full-train`
    + differential LR（`vision_lr_multiplier: 0.1` / `backbone_lr_multiplier: 1.0`）。
