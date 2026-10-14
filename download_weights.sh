@@ -27,7 +27,7 @@ BASE_REPO="${BASE_REPO:-OpenGalaxea/G05}"
 CODEC_REPO="${CODEC_REPO:-Zenith6666/yam-actioncodec}"
 HF_TOKEN="${HF_TOKEN:?请设置 HF_TOKEN（HF 读权限 token，勿硬编码）}"
 export HF_TOKEN
-export HF_ENDPOINT="${HF_ENDPOINT:-}"
+export HF_ENDPOINT="${HF_ENDPOINT:-https://huggingface.co}"
 
 mkdir -p checkpoints data/stats
 

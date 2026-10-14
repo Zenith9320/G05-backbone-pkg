@@ -25,7 +25,7 @@ HF_REPO_ID="${HF_REPO_ID:-Zenith6666/yam-backbone}"
 HF_TOKEN="${HF_TOKEN:?请设置 HF_TOKEN（HF 写权限 token，勿硬编码）}"
 EXP_DIR="${EXP_DIR:?请设置 EXP_DIR（微调输出 exp 目录，如 \$G05_OUTPUT_DIR/yam/2026-.../）}"
 export HF_REPO_ID HF_TOKEN
-export HF_ENDPOINT="${HF_ENDPOINT:-}"
+export HF_ENDPOINT="${HF_ENDPOINT:-https://huggingface.co}"
 
 HF_REPO_ID="$HF_REPO_ID" HF_TOKEN="$HF_TOKEN" EXP_DIR="$EXP_DIR" python - <<'PY'
 import os
